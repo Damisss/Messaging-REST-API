@@ -5,7 +5,7 @@ module.exports = (req, res, next)=>{
     if(!authHeader){
         const error = new Error('Unauthorized')
         error.statusCode = 401
-        throw error
+        throw error 
     }
     const token = authHeader.split(' ')[1]
     let decode
